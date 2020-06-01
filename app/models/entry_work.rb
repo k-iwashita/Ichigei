@@ -1,0 +1,2 @@
+class EntryWork < ApplicationRecord
+end
