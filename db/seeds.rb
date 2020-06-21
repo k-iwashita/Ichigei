@@ -7,26 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-#ユーザー
-10.times do |n|
-  name  = "User#{n+1}"
-  email = "example-#{n+1}@careerWalk.com"
-  password = "password"
-  user = User.create!(name:  name,
-               email: email,
-               display_name: name,
-               password: password,
-               password_confirmation: password)
-  title = "#{n+1}"
-  content = "content#{n+1}"
-  url = "url#{n+1}"
-  condition = "condition#{n+1}"
-  reward = n + 50
-  5.times do |e|
-    user.posts.create!(title: "Post#{title}", content: "Post#{content}", url: "Post#{url}")
-    user.works.create!(title: "Work#{title}", description: "Work#{content}", condition: "Work#{condition}", reward: reward, started_at: Time.zone.now, ended_at: Time.zone.now)
-  end
-end
 
 
 #カテゴリー
@@ -42,5 +22,10 @@ Category.create([
     { name: '翻訳(スピーキング）' },
     { name: '運転' },
     { name: '漫才' },
-    { name: 'コント' }
+    { name: 'コント' },
+    { name: '野球' },
+    { name: 'サッカー' },
+    { name: 'バスケットボール'},
+    { name: 'コント' },
+    { name: '相談（カウンセリング）' }
   ])
